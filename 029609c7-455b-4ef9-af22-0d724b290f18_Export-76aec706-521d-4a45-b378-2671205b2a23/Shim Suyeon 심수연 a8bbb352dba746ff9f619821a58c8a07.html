@@ -1,0 +1,724 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Shim Suyeon 심수연</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-interactiveBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="a8bbb352-dba7-46ff-9f61-9821a58c8a07" class="page sans"><header><h1 class="page-title">Shim Suyeon 심수연</h1><p class="page-description"></p></header><div class="page-body"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="8f03d8cc-49f5-483d-8ba5-bec9728d007f"><div style="font-size:1.5em"><span class="icon">💫</span></div><div style="width:100%"><strong>The opposite side of the right way is the easy way
+옳은 길의 반대는 쉬운 길</strong></div></figure><p id="ef6fc2ee-88d0-4ea6-a2c7-aa3f7643c408" class="">
+</p><h2 id="f33caa10-2876-4409-96a4-863aa82a1fcb" class="block-color-yellow_background">Profile</h2><div id="331c1fe3-57f4-4771-ba17-291e030d5835" class="column-list"><div id="d3ef5713-96f6-4304-8c51-90c65b3f1dd8" style="width:50%" class="column"><figure id="fa5da988-ca65-4f07-96d5-ebb9b2179854" class="image"><a href="Shim%20Suyeon%20%E1%84%89%E1%85%B5%E1%86%B7%E1%84%89%E1%85%AE%E1%84%8B%E1%85%A7%E1%86%AB%20a8bbb352dba746ff9f619821a58c8a07/Untitled.png"><img style="width:432px" src="Shim%20Suyeon%20%E1%84%89%E1%85%B5%E1%86%B7%E1%84%89%E1%85%AE%E1%84%8B%E1%85%A7%E1%86%AB%20a8bbb352dba746ff9f619821a58c8a07/Untitled.png"/></a></figure></div><div id="e28bc8bf-2b16-4157-a612-d7e6ccf02bc3" style="width:50%" class="column"><p id="e6abe1db-7d97-4270-958f-532a4908594f" class="">✉ suyeonshim@gm.gist.ac.kr</p><p id="05103b18-96ad-410a-af47-e49e39f4312b" class="">📞010-2234-9008</p><figure id="b127bc70-c7b6-4723-8fca-3d79e36b0b30"><a href="https://github.com/Shimsuyeon" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Shimsuyeon - Overview</div><div class="bookmark-description">GIST EECS suyeonshim@gm.gist.ac.kr. Shimsuyeon has 28 repositories available. Follow their code on GitHub.</div></div><div class="bookmark-href"><img src="https://github.com/fluidicon.png" class="icon bookmark-icon"/>https://github.com/Shimsuyeon</div></div><img src="https://avatars.githubusercontent.com/u/84979352?v=4?s=400" class="bookmark-image"/></a></figure><p id="fb5d5280-299e-439d-bbf8-9abc4298f3ca" class="">
+</p></div></div><p id="dfaff9ea-5b52-41c9-8995-5cfc987c4c86" class="">
+</p><h2 id="a295b6df-91ac-4483-ab41-fd345e32dec6" class="block-color-blue_background">Education</h2><blockquote id="70c9aa3e-7da2-45de-8fe9-626aa8f32e52" class=""><strong>GIST EECS(광주과학기술원 전기전자컴퓨터공학부)</strong><p id="f8d914c3-7fd7-45da-aae2-36e31bc4e8f7" class="">2021.3.~current</p></blockquote><blockquote id="97d6caff-d4f2-4832-9091-f8a4ec38252e" class=""><strong>Gwangju Science Academy for gifted(과학영재학교 광주과학고등학교)</strong> 
+2017.02.~2020.01.</blockquote><p id="67840d29-8284-45ce-94b2-57f4f1084a8d" class="">
+</p><h2 id="077dc591-21d6-4efd-9aa3-211e8f8984a7" class="block-color-pink_background">Stack Experience</h2><blockquote id="e77776a8-6370-42d6-96f4-79dac3dcce0d" class=""><strong>Frontend
+</strong><mark class="highlight-purple_background">React(TypeScript, JavaScript), Flutter(Dart), </mark><mark class="highlight-default">Android Studio(Kotlin, Java)</mark></blockquote><blockquote id="19d1273b-fc55-4e8b-b48b-80658aff6f28" class=""><strong>Backend</strong><p id="00126d1f-d491-45a0-a137-482c3b6552da" class=""><mark class="highlight-purple_background">Spring(Kotlin),</mark> node.js(JavaScript)</p></blockquote><blockquote id="6b37b589-a462-4e37-bf15-2ddee5fd6d2b" class=""><strong>Database</strong><p id="a002daa2-efdc-45a2-a493-78f29eaf4fb6" class=""><mark class="highlight-purple_background">mySQL,</mark> MongoDB</p></blockquote><blockquote id="b2b80e23-822d-450d-b0fb-3871b54ae254" class=""><strong>Server</strong>
+<mark class="highlight-purple_background">AWS(EC2, S3 bucket, CloudFront),</mark> GCP(Google API)</blockquote><blockquote id="0804f99d-ba6f-4f31-8921-b619d488205b" class=""><strong>Others</strong>
+Processing(Java), P5.js(JavaScript), Solidity, <mark class="highlight-purple_background">Unity(C#), Arduino</mark></blockquote><p id="ddcae36b-e810-4fb7-88d2-f820cf0f49f5" class=""><em><mark class="highlight-gray">* Highlight: Currently Using</mark></em></p><h2 id="a847d6ef-4944-435d-9335-e53a5ed2c6f2" class="block-color-orange_background">Currently Working</h2><blockquote id="502328a5-e559-4635-8b1e-871db5450601" class="block-color-gray_background"><strong>Inyeon Application - Networking SNS Hub (2023.02.~current)</strong></blockquote><ul id="8e148cf4-4a9b-4b2e-be1d-15ce627e1411" class="bulleted-list"><li style="list-style-type:disc">Link<ul id="0e8568c1-b7fd-4b5a-a423-b3089cf26815" class="bulleted-list"><li style="list-style-type:circle">Lending page: <a href="https://www.inyeon.io/">https://www.inyeon.io/</a></li></ul><ul id="fd9130f5-d5e6-4da9-b40c-8f4931d0da20" class="bulleted-list"><li style="list-style-type:circle">Android: <a href="https://play.google.com/store/apps/details?id=io.inyeon.inyeon_app">https://play.google.com/store/apps/details?id=io.inyeon.inyeon_app</a></li></ul><ul id="9b51cb86-d3bf-4644-8e37-7674622fddc0" class="bulleted-list"><li style="list-style-type:circle">IOS: <a href="https://apps.apple.com/us/app/%EC%9D%B8%EC%97%B0/id6461213270">https://apps.apple.com/us/app/인연/id6461213270</a></li></ul></li></ul><ul id="3d7576e3-17a5-47b9-95a0-ef8da0253407" class="bulleted-list"><li style="list-style-type:disc">Position<ul id="4f31fb1b-ad5f-43b0-821b-ab3c96f2093a" class="bulleted-list"><li style="list-style-type:circle">The leader of the startup club (Manage budget)</li></ul><ul id="d95bb79c-09c3-44fc-9af2-1c9a28140d06" class="bulleted-list"><li style="list-style-type:circle">Developer (Main: Frontend, Sub: Backend)</li></ul><ul id="ca5308ce-4931-4345-9a0b-f5d4bf26b8aa" class="bulleted-list"><li style="list-style-type:circle">Sub-Designer(Tool: Figma)</li></ul></li></ul><ul id="63a70665-0965-4def-adf9-ded84d6d68ae" class="bulleted-list"><li style="list-style-type:disc">Work Flow<ul id="b1912919-0f73-4a84-b9c1-b9f0ebe81096" class="bulleted-list"><li style="list-style-type:circle">Application Release (Manage the Apple &amp; Google developer process)</li></ul><ul id="06f6aa6a-aba5-4f0e-b145-3e1f26dd3df8" class="bulleted-list"><li style="list-style-type:circle">Designed the demo product and name card<figure id="7745dea3-cc50-4446-ab5f-1e0ab06b166d" class="image"><a href="Shim%20Suyeon%20%E1%84%89%E1%85%B5%E1%86%B7%E1%84%89%E1%85%AE%E1%84%8B%E1%85%A7%E1%86%AB%20a8bbb352dba746ff9f619821a58c8a07/Untitled%201.png"><img style="width:480px" src="Shim%20Suyeon%20%E1%84%89%E1%85%B5%E1%86%B7%E1%84%89%E1%85%AE%E1%84%8B%E1%85%A7%E1%86%AB%20a8bbb352dba746ff9f619821a58c8a07/Untitled%201.png"/></a></figure></li></ul><ul id="e146bb20-2339-4aef-bd3f-a08b3f1e8bff" class="bulleted-list"><li style="list-style-type:circle">Push Alarm Feature (Currently Developing)<ul id="e85a9324-e2c2-43fc-b771-6e5f1976db79" class="bulleted-list"><li style="list-style-type:square">Frontend - Flutter / Backend - Spring(Kotlin) / Database - MySQL</li></ul><ul id="8337afea-52be-4e44-8cc0-4db72bff85d7" class="bulleted-list"><li style="list-style-type:square">Use macOS, Windows at the same time…</li></ul></li></ul><p id="5b10185a-a8e5-4cfc-9f47-cf2db15533cf" class="">
+</p></li></ul><blockquote id="648beb91-a6b1-4ccf-a7ba-6a16b9d05b3b" class="block-color-gray_background"><strong>Ziggle - GIST studnet Organization, Infoteam</strong><p id="838aa76a-81f5-4937-a116-eef414637072" class=""><a href="https://github.com/gsainfoteam/ziggle-fe">https://github.com/gsainfoteam/ziggle-fe</a></p><figure id="b0b929d6-76a3-4267-8c15-5f4b3638a9b7"><a href="https://ziggle.gistory.me/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">지글</div><div class="bookmark-description">지스트의 모든 공지를 한눈에</div></div><div class="bookmark-href"><img src="https://ziggle.gistory.me/favicon.png" class="icon bookmark-icon"/>https://ziggle.gistory.me/</div></div><img src="https://ziggle.gistory.me/favicon.png" class="bookmark-image"/></a></figure></blockquote><ul id="0e69e9a9-536f-44a4-ac8f-5df10556b1eb" class="bulleted-list"><li style="list-style-type:disc">Total notice managing service for GIST students<ul id="73f77269-d659-4b99-9a01-a7b42ce9900b" class="bulleted-list"><li style="list-style-type:circle">Design - Figma - Mypage UI/UX</li></ul><ul id="26a93797-5dd8-4e26-83f7-bf5c04609e79" class="bulleted-list"><li style="list-style-type:circle">Frontend - React(TS) - search page, mypage UI</li></ul><ul id="12420896-c937-43d4-be0d-a2309f9097d5" class="bulleted-list"><li style="list-style-type:circle">Styled Component, Code refractory, make a component</li></ul><ul id="45b1093c-854d-4065-bf87-08c88b5d4950" class="bulleted-list"><li style="list-style-type:circle">Currently making an additional notice component</li></ul></li></ul><div id="58bc6b36-3e43-4885-a16c-20e2227d339f" class="column-list"><div id="5edcc386-7fbe-43d7-9b12-3ecd87a28978" style="width:50.000000000000014%" class="column"><figure id="2e4e8687-6098-4c97-b611-b5ccfe4046b9" class="image"><a href="Shim%20Suyeon%20%E1%84%89%E1%85%B5%E1%86%B7%E1%84%89%E1%85%AE%E1%84%8B%E1%85%A7%E1%86%AB%20a8bbb352dba746ff9f619821a58c8a07/Untitled%202.png"><img style="width:1768px" src="Shim%20Suyeon%20%E1%84%89%E1%85%B5%E1%86%B7%E1%84%89%E1%85%AE%E1%84%8B%E1%85%A7%E1%86%AB%20a8bbb352dba746ff9f619821a58c8a07/Untitled%202.png"/></a></figure></div><div id="b9d843a4-a0f2-4c67-93ce-60a022de308e" style="width:50%" class="column"><figure id="21eece80-b1b8-420b-84bf-1149a8011a85" class="image"><a href="Shim%20Suyeon%20%E1%84%89%E1%85%B5%E1%86%B7%E1%84%89%E1%85%AE%E1%84%8B%E1%85%A7%E1%86%AB%20a8bbb352dba746ff9f619821a58c8a07/Untitled%203.png"><img style="width:1769px" src="Shim%20Suyeon%20%E1%84%89%E1%85%B5%E1%86%B7%E1%84%89%E1%85%AE%E1%84%8B%E1%85%A7%E1%86%AB%20a8bbb352dba746ff9f619821a58c8a07/Untitled%203.png"/></a></figure></div></div><h3 id="1994cea9-5ad1-4e1f-818e-bc7951cfc402" class="block-color-orange_background">Worked before</h3><h3 id="43780350-67c3-43c0-9af1-200a041dffb5" class="block-color-blue">Internship</h3><blockquote id="0e8ea9b1-407c-4132-801c-25fb6b019b3c" class="block-color-gray_background"><strong>Blockchain Internship - GIST Infonet Lab</strong><p id="69803f72-5cef-4b3f-a1c4-0ac141f39ae6" class="">2021.12.~2022.02.</p></blockquote><figure id="20a3f904-f522-42b5-aa0b-fa2ea7113134"><div class="source"><a href="Shim%20Suyeon%20%E1%84%89%E1%85%B5%E1%86%B7%E1%84%89%E1%85%AE%E1%84%8B%E1%85%A7%E1%86%AB%20a8bbb352dba746ff9f619821a58c8a07/20215117_%25EC%258B%25AC%25EC%2588%2598%25EC%2597%25B0_%25EC%259D%25B8%25ED%258F%25AC%25EB%2584%25B7_%25ED%2595%2599%25EB%25B6%2580_%25EC%259D%25B8%25ED%2584%25B4_%25ED%2599%259C%25EB%258F%2599_%25EB%25B3%25B4%25EA%25B3%25A0%25EC%2584%259C.pdf">20215117_심수연_인포넷 학부 인턴 활동 보고서.pdf</a></div></figure><ul id="f3d4e9b4-ca6b-4a21-a042-fe26c5411c08" class="bulleted-list"><li style="list-style-type:disc">I did a small individual project, a voting system with solidity.</li></ul><ul id="45efd71d-7c61-4fa6-abcb-2f297603d66c" class="bulleted-list"><li style="list-style-type:disc">I was a junior student, so I did not do many fancy things there, but I learned the computer science laboratory culture in this period.</li></ul><h3 id="21df094b-b531-4cbd-9db2-d46af12afedc" class="block-color-blue">Developer+UI/UX Designer</h3><blockquote id="a376dbf6-94df-4e4e-a92d-31b5ecb91cd3" class="block-color-gray_background"><strong>Ggongsi Project - Recommand study place&amp;study mate</strong>
+2023.04.01.~current
+Team Leader + Frontend + Sub designer<figure id="60db223f-a153-42a3-aa95-22a2663131d0"><a href="http://ggongsi.site/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Ggongsi</div></div><div class="bookmark-href">http://ggongsi.site/</div></div></a></figure><figure id="d42f7b3e-e93a-461e-b024-c4952eaa55f7"><div class="source">https://github.com/Shimsuyeon/2nd_2023_Ggongsi</div></figure></blockquote><p id="24efbda3-b53e-4959-9e83-757c193f6a45" class="block-color-red"><strong>What did I do?</strong></p><ul id="2b8c3dee-783c-4ef6-9a28-68ff16379609" class="bulleted-list"><li style="list-style-type:disc">Frontend: react, styled-components, Axios, jotai / Make question pages</li></ul><ul id="cef3493d-fcf7-4d8b-a0db-0bff2c3d23c1" class="bulleted-list"><li style="list-style-type:disc">Design: Figma, Supports the main designer to develop the design in the short term.</li></ul><ul id="a4824700-01fd-4983-969e-dfcc589b716e" class="bulleted-list"><li style="list-style-type:disc">Server: Use AWS to release the project. (Use s3 bucket, CloudFront)</li></ul><p id="50ee0680-cc9d-42c7-9fd2-f80ff1182351" class="">Over 200 users joined this service and uploaded the results on their Instagram.</p><figure id="489b4cd8-ff24-424a-b1d8-8a7aeb498932" class="image"><a href="Shim%20Suyeon%20%E1%84%89%E1%85%B5%E1%86%B7%E1%84%89%E1%85%AE%E1%84%8B%E1%85%A7%E1%86%AB%20a8bbb352dba746ff9f619821a58c8a07/Untitled%204.png"><img style="width:576px" src="Shim%20Suyeon%20%E1%84%89%E1%85%B5%E1%86%B7%E1%84%89%E1%85%AE%E1%84%8B%E1%85%A7%E1%86%AB%20a8bbb352dba746ff9f619821a58c8a07/Untitled%204.png"/></a></figure><hr id="b4ec5b2a-a384-47d1-8875-a7d2772ed764"/><blockquote id="eb45c98a-280a-4065-b64f-24af263bd0fe" class="block-color-gray_background"><strong>Mad Camp(at KAIST)</strong>
+2023.06.29.~2023.07.28</blockquote><ol type="1" id="bebeea0f-410a-4b6d-810d-84dacab5e96a" class="numbered-list" start="1"><li><strong>Star Rabbit, Moon cookie - Unity Game project(23.07.20.~23.07.27.)</strong><p id="80cbd299-ee35-4d79-bddd-3fbb2e793152" class=""><a href="https://github.com/Shimsuyeon/madcamp4_moon_rabbit_unity">https://github.com/Shimsuyeon/madcamp4_moon_rabbit_unity</a></p><p id="b21d040e-fa06-4c2c-8e70-72f29f4ef194" class=""><mark class="highlight-red"><strong>What did I do?</strong></mark></p><ul id="0ca25566-0426-4956-813b-fd2e1f385c6b" class="bulleted-list"><li style="list-style-type:disc">Frontend: Unity with C# scripts | Main, Login/Join, Cookie store, Cookie cafe</li></ul><ul id="f8aeb24c-554e-42b3-86d0-a9869c21b624" class="bulleted-list"><li style="list-style-type:disc">Backend: Node.js, MongoDB | Login/Join, Cookie make/sell, Cafe object make/sell</li></ul><ul id="f6fbb12d-1d65-4d3f-8a98-63f39e2556aa" class="bulleted-list"><li style="list-style-type:disc">Design: Figma | All pages</li></ul><ul id="def3e05c-05c0-4c3e-87eb-031ab9c5dd29" class="bulleted-list"><li style="list-style-type:disc">Server: GCP | Setting, Releasing</li></ul><p id="e0cae07a-af7c-4123-92fd-f14f9bf8ff15" class=""> Before this, I thought unity was a very hard tool, but it was not much actually. However, transport with unity c# scripts and node.js was very hard. Anyway, I did it!</p><p id="7c317192-5382-4db1-a568-9b26507c6429" class="">
+</p></li></ol><figure id="caff7681-783d-47bc-9b93-bfbb55f2bba5" class="image"><a href="Shim%20Suyeon%20%E1%84%89%E1%85%B5%E1%86%B7%E1%84%89%E1%85%AE%E1%84%8B%E1%85%A7%E1%86%AB%20a8bbb352dba746ff9f619821a58c8a07/Untitled%205.png"><img style="width:240px" src="Shim%20Suyeon%20%E1%84%89%E1%85%B5%E1%86%B7%E1%84%89%E1%85%AE%E1%84%8B%E1%85%A7%E1%86%AB%20a8bbb352dba746ff9f619821a58c8a07/Untitled%205.png"/></a></figure><ol type="1" id="d292aab1-55d6-4a32-a2d3-151a42da59ad" class="numbered-list" start="2"><li><strong>MADLIST - Playlist Recommend Service (23.07.06.~23.07.13.)</strong><p id="e3a70a46-7761-4c24-8317-b3a9c46c975b" class=""><a href="https://github.com/Shimsuyeon/madcamp2nd">https://github.com/Shimsuyeon/madcamp2nd</a></p><p id="69b52e8f-84e6-46f9-87a8-86ab283614dd" class=""><mark class="highlight-red"><strong>What did I do?</strong></mark></p><ul id="50c46131-dbca-4d22-94dc-25d189658fcd" class="bulleted-list"><li style="list-style-type:disc">Frontend: Flutter | Pending, Main, My page</li></ul><ul id="8ca79dc9-3089-4adf-8707-206c979fcdf1" class="bulleted-list"><li style="list-style-type:disc">Backend: Node.js, MongoDB | Google Login API, Goolge youtube API</li></ul><ul id="8f9f8454-ba12-4eaa-a02b-3c233245c658" class="bulleted-list"><li style="list-style-type:disc">Design: Figma | All pages</li></ul><ul id="4b9d74e3-9a12-496c-a36f-3dc9a2d664a5" class="bulleted-list"><li style="list-style-type:disc">Server: GCP | Setting, Releasing</li></ul><p id="3044986b-424b-4cd2-a35b-049986813952" class="">In this project, I used Flutter and Node.js, MongoDB, and GCP for the first time in my life. Also, it was the first time that I took part in Backend. It was hard because I had to learn tools in one week, but after that, I could do all parts of development(Front, Back, server, DB).</p></li></ol><figure id="e18f9a4b-3b25-4650-9553-d41e187ecab1" class="image"><a href="Shim%20Suyeon%20%E1%84%89%E1%85%B5%E1%86%B7%E1%84%89%E1%85%AE%E1%84%8B%E1%85%A7%E1%86%AB%20a8bbb352dba746ff9f619821a58c8a07/Untitled%206.png"><img style="width:432px" src="Shim%20Suyeon%20%E1%84%89%E1%85%B5%E1%86%B7%E1%84%89%E1%85%AE%E1%84%8B%E1%85%A7%E1%86%AB%20a8bbb352dba746ff9f619821a58c8a07/Untitled%206.png"/></a></figure><ol type="1" id="aed3aea4-ae17-487a-a401-36beea8836f0" class="numbered-list" start="3"><li><strong>Surviving as a Developer! - React Web Game (2023.07.13.~2023.07.20.)</strong><p id="941d0906-99ad-4068-9299-a5a213ba120e" class=""><a href="https://github.com/Shimsuyeon/madcamp-week3">https://github.com/Shimsuyeon/madcamp-week3</a><div class="indented"><p id="36761095-3955-4381-83bf-6dc55869e177" class=""><mark class="highlight-red"><strong>What did I do?</strong></mark></p><ul id="558b262d-ea32-4a83-b6ce-2906d6f4f1aa" class="bulleted-list"><li style="list-style-type:disc">Frontend: React, Axios, Styled-Components, Jotai | All Pages</li></ul></div></p></li></ol><div id="bd364056-8204-4383-afef-e53b74e5f439" class="column-list"><div id="b51e6fe8-9fcf-4feb-ae64-a043e9a9516a" style="width:50%" class="column"><figure id="eb2f5cba-5c28-4d88-8971-a5921a9ef802" class="image"><a href="Shim%20Suyeon%20%E1%84%89%E1%85%B5%E1%86%B7%E1%84%89%E1%85%AE%E1%84%8B%E1%85%A7%E1%86%AB%20a8bbb352dba746ff9f619821a58c8a07/Untitled%207.png"><img style="width:633px" src="Shim%20Suyeon%20%E1%84%89%E1%85%B5%E1%86%B7%E1%84%89%E1%85%AE%E1%84%8B%E1%85%A7%E1%86%AB%20a8bbb352dba746ff9f619821a58c8a07/Untitled%207.png"/></a></figure></div><div id="63f219a8-1eee-4538-92c8-81d95f36289a" style="width:50%" class="column"><figure id="900bf562-a479-4b45-81fb-a984365f741e" class="image"><a href="Shim%20Suyeon%20%E1%84%89%E1%85%B5%E1%86%B7%E1%84%89%E1%85%AE%E1%84%8B%E1%85%A7%E1%86%AB%20a8bbb352dba746ff9f619821a58c8a07/Untitled%208.png"><img style="width:144px" src="Shim%20Suyeon%20%E1%84%89%E1%85%B5%E1%86%B7%E1%84%89%E1%85%AE%E1%84%8B%E1%85%A7%E1%86%AB%20a8bbb352dba746ff9f619821a58c8a07/Untitled%208.png"/></a></figure></div></div><hr id="689924cb-9ef8-4b3f-8f11-49c5e5b2a60c"/><blockquote id="f9c2fcf4-7742-49a4-bb85-953aa11342c6" class="block-color-gray_background"><strong>2023 Google Sollution Challenge</strong>
+2023.02.01.~2023.03.31.<strong>
+</strong><a href="https://github.com/Shimsuyeon/friends-tutor">https://github.com/Shimsuyeon/friends-tutor</a><figure id="ad9f8f9e-ad99-4fd6-b984-dd0144b1306d"><a href="https://www.youtube.com/watch?v=v39WYfTsenQ" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Friends Tutor - GDSC Solution Challenge 2023</div><div class="bookmark-description">2023 GDSC solution challenge video submission 
+
+Group : GDSC GIST 
+San Kim, Suyeon Shim, Kyungmin Choi, Seung Bin Shin</div></div><div class="bookmark-href"><img src="https://www.youtube.com/s/desktop/b926992e/img/favicon_144x144.png" class="icon bookmark-icon"/>https://www.youtube.com/watch?v=v39WYfTsenQ</div></div><img src="https://i.ytimg.com/vi/v39WYfTsenQ/maxresdefault.jpg" class="bookmark-image"/></a></figure><figure id="2fa9e067-f8c8-4b08-a176-15e29a43b677"><a href="https://friends-tutor.netlify.app/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">Friends Mentor</div><div class="bookmark-description">Web site created using create-react-app</div></div><div class="bookmark-href"><img src="https://friends-tutor.netlify.app/favicon.ico" class="icon bookmark-icon"/>https://friends-tutor.netlify.app/</div></div></a></figure></blockquote><p id="ad8c4957-a1f5-42d8-b84e-8be268f7039d" class=""><mark class="highlight-red"><strong>What did I do?</strong></mark></p><ul id="bc888ab1-6856-4126-8c15-d451d19a2745" class="bulleted-list"><li style="list-style-type:disc">Frontend: React | Mypage, Modal, Language change.etc</li></ul><ul id="177ab9eb-d819-47f7-81c5-e0c1a9a116bf" class="bulleted-list"><li style="list-style-type:disc">Interview: Take opinions from the child</li></ul><figure id="3054d66d-11f8-4e4b-a9ac-89d73924448a" class="image"><a href="Shim%20Suyeon%20%E1%84%89%E1%85%B5%E1%86%B7%E1%84%89%E1%85%AE%E1%84%8B%E1%85%A7%E1%86%AB%20a8bbb352dba746ff9f619821a58c8a07/Untitled%209.png"><img style="width:480px" src="Shim%20Suyeon%20%E1%84%89%E1%85%B5%E1%86%B7%E1%84%89%E1%85%AE%E1%84%8B%E1%85%A7%E1%86%AB%20a8bbb352dba746ff9f619821a58c8a07/Untitled%209.png"/></a></figure><hr id="0233813d-235c-44aa-8be0-3edfafc57203"/><blockquote id="d53893d8-6897-455e-9ee3-55ae380b5a5d" class="block-color-gray_background"><strong>Ex-finder - Test Subject Recruitment Service
+</strong>2022.04.01.~2022.12.01. (지스트 무한도전 7기)
+Team Leader + Designer<p id="20a09e7f-b26b-4a6c-ae25-3f6b7a9b695e" class=""><a href="https://xd.adobe.com/view/962dc06f-abd7-434c-8333-657bf288cf1a-c37e/grid/">https://xd.adobe.com/view/962dc06f-abd7-434c-8333-657bf288cf1a-c37e/grid/</a></p></blockquote><figure id="c7c191a9-e041-4532-a124-e0f9dd1b137d" class="image"><a href="Shim%20Suyeon%20%E1%84%89%E1%85%B5%E1%86%B7%E1%84%89%E1%85%AE%E1%84%8B%E1%85%A7%E1%86%AB%20a8bbb352dba746ff9f619821a58c8a07/Untitled%2010.png"><img style="width:528px" src="Shim%20Suyeon%20%E1%84%89%E1%85%B5%E1%86%B7%E1%84%89%E1%85%AE%E1%84%8B%E1%85%A7%E1%86%AB%20a8bbb352dba746ff9f619821a58c8a07/Untitled%2010.png"/></a></figure><p id="366c37d1-c4d6-45ae-b160-948eefb983b4" class="">
+</p><h2 id="1120f311-3256-4746-87f7-38cd97cf14f7" class="block-color-red_background">Awards</h2><blockquote id="7e6ea5aa-2256-483f-bacf-8bf58ba63e5d" class="block-color-gray_background"><strong>2023 GIST X GDSC HACKATHON 
+</strong><mark class="highlight-blue"><strong>1st prize, Prize from dean of GIST college
+</strong></mark><mark class="highlight-default">2023.04.30.</mark><p id="e2c358ea-0226-452e-bef1-3a8d1401c62f" class=""><a href="https://github.com/Shimsuyeon/gdsc-2023-hackathon">https://github.com/Shimsuyeon/gdsc-2023-hackathon</a></p><figure id="63ee1218-fd10-4e77-8404-89453b9f6dc0"><a href="https://gistnews.co.kr/?p=6193" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">제1회 GDSC X GIST 해커톤 개최</div><div class="bookmark-description">‘Developer’ 넘어 ‘Problem Solver’로 구글 소속 개발자 동아리 Google Developer Student Clubs(이하 “GDSC”)가 “사회 문제 해결을 위한 서비스 개발”을 목표로 제1회 &lt;GDSC X GIST 해커톤&gt;을 개최했다. 행사는 4월 29일과 30일 이틀간 G…</div></div><div class="bookmark-href"><img src="https://gistnews.co.kr/wp-content/uploads/2022/02/그림1-300x300-1.png" class="icon bookmark-icon"/>https://gistnews.co.kr/?p=6193</div></div><img src="https://i0.wp.com/gistnews.co.kr/wp-content/uploads/2023/06/발표_세션-scaled.jpg?fit=1200%2C900&amp;ssl=1" class="bookmark-image"/></a></figure></blockquote><p id="dd726b17-ef0f-47dc-8772-3961cf508d4c" class=""><mark class="highlight-red"><strong>What did I do?</strong></mark><div class="indented"><ul id="c7f01394-5d44-49a5-9749-cef790eaac5b" class="bulleted-list"><li style="list-style-type:disc">Team leader: Presentation, PPT</li></ul><ul id="60ca53b0-bc15-420b-9207-11c8a2076145" class="bulleted-list"><li style="list-style-type:disc">Front end: React, Axios, Styled-Components | Pending, Sign up, My-log</li></ul></div></p><div id="536f4dec-71a7-4492-b434-f6bdaf5062fc" class="column-list"><div id="79d9f11b-0f70-4bb5-b748-e145022f7f23" style="width:50%" class="column"><figure id="2d1891d6-9ce2-4436-a265-6e463c61cb2d" class="image"><a href="Shim%20Suyeon%20%E1%84%89%E1%85%B5%E1%86%B7%E1%84%89%E1%85%AE%E1%84%8B%E1%85%A7%E1%86%AB%20a8bbb352dba746ff9f619821a58c8a07/Untitled%2011.png"><img style="width:480px" src="Shim%20Suyeon%20%E1%84%89%E1%85%B5%E1%86%B7%E1%84%89%E1%85%AE%E1%84%8B%E1%85%A7%E1%86%AB%20a8bbb352dba746ff9f619821a58c8a07/Untitled%2011.png"/></a></figure></div><div id="b335c8e0-b1e7-48bc-b624-db0db458ce4b" style="width:50%" class="column"><figure id="6a32f0c5-8c7c-475e-96a1-20694ed5e049" class="image"><a href="Shim%20Suyeon%20%E1%84%89%E1%85%B5%E1%86%B7%E1%84%89%E1%85%AE%E1%84%8B%E1%85%A7%E1%86%AB%20a8bbb352dba746ff9f619821a58c8a07/Untitled%2012.png"><img style="width:4000px" src="Shim%20Suyeon%20%E1%84%89%E1%85%B5%E1%86%B7%E1%84%89%E1%85%AE%E1%84%8B%E1%85%A7%E1%86%AB%20a8bbb352dba746ff9f619821a58c8a07/Untitled%2012.png"/></a></figure></div></div><hr id="44902434-58ae-420a-ab9d-7168928cc196"/><p id="62fb6f71-fb47-474c-84d5-53d70b24ae1b" class="">
+</p><blockquote id="5597ac2b-22d5-4c14-9ed7-549cc9017e87" class="block-color-gray_background"><strong>2022 GDSC KR WINTER HACK
+</strong><mark class="highlight-blue"><strong>3rd prize, GDSC KR
+</strong></mark><mark class="highlight-default">2023.02.04.~02.05.</mark><p id="032aa7a2-f937-4768-aad1-4e2fb658931e" class=""><a href="https://github.com/Shimsuyeon/2022-GDSC-HACKATHON">https://github.com/Shimsuyeon/2022-GDSC-HACKATHON</a></p></blockquote><p id="43f5c64c-2091-40f6-a655-89966f099b82" class=""><mark class="highlight-red"><strong>What did I do?</strong></mark></p><ul id="a9f7a742-5053-4127-81b6-c4bb89e7405a" class="bulleted-list"><li style="list-style-type:disc">Design: Logo, All pages, Components</li></ul><ul id="240846fd-0269-4c52-9808-3f59d63bb223" class="bulleted-list"><li style="list-style-type:disc">Frontend: Detail page a little bit</li></ul><figure id="0ba7e7ac-2e86-4fe0-9c55-b6b4c5bf944b" class="image"><a href="Shim%20Suyeon%20%E1%84%89%E1%85%B5%E1%86%B7%E1%84%89%E1%85%AE%E1%84%8B%E1%85%A7%E1%86%AB%20a8bbb352dba746ff9f619821a58c8a07/Untitled%2013.png"><img style="width:384px" src="Shim%20Suyeon%20%E1%84%89%E1%85%B5%E1%86%B7%E1%84%89%E1%85%AE%E1%84%8B%E1%85%A7%E1%86%AB%20a8bbb352dba746ff9f619821a58c8a07/Untitled%2013.png"/></a></figure><hr id="7302eb03-77de-4455-93fc-3c8b7c9c6ff3"/><p id="d395d36e-0929-45c9-96f1-9a9915a89caa" class="">
+</p><blockquote id="f8cd8f43-bbd0-4661-b57c-f95e903edd69" class="block-color-gray_background"><strong>2021 Creative Space G A.I. &amp; IoT ideathon
+</strong><mark class="highlight-blue"><strong>3rd prize, GIST </strong></mark><p id="c0164990-748e-45a8-a91e-4d86350949d3" class="">2021.07.04.</p></blockquote><p id="e18e51c9-906f-4f52-84ee-5919a948d40e" class=""><mark class="highlight-red"><strong>What did I do?</strong></mark></p><ul id="2b7d2c9d-335a-4fe3-94d7-7d4561eaf440" class="bulleted-list"><li style="list-style-type:disc">Team Leader: Make an idea, Presentation, PPT, Design</li></ul><ul id="99f680c7-b18b-478f-b0e0-3e7450124471" class="bulleted-list"><li style="list-style-type:disc">Also, applied this idea for a patent(in private). (id: 10-2022-0128521)<figure id="b024468a-ac28-49e2-bafe-dc427d48b5bc" class="image"><a href="Shim%20Suyeon%20%E1%84%89%E1%85%B5%E1%86%B7%E1%84%89%E1%85%AE%E1%84%8B%E1%85%A7%E1%86%AB%20a8bbb352dba746ff9f619821a58c8a07/Untitled%2014.png"><img style="width:432px" src="Shim%20Suyeon%20%E1%84%89%E1%85%B5%E1%86%B7%E1%84%89%E1%85%AE%E1%84%8B%E1%85%A7%E1%86%AB%20a8bbb352dba746ff9f619821a58c8a07/Untitled%2014.png"/></a></figure></li></ul><hr id="47f1b461-152a-4c72-8e4a-8598a097221f"/><blockquote id="c90b3d15-602f-4322-a100-ec66dbeb6881" class="block-color-gray_background"><strong>2023 커뮤니케이션 국제 디자인 공모전(International Communication Design Competition)</strong>
+<mark class="highlight-blue"><strong>Special Selection(특선), Communication Design Association of Korea
+</strong></mark>2023.07.28.<p id="02ba33d9-499b-4f0f-8014-3c339b02e6b9" class=""><a href="https://github.com/Shimsuyeon/starwalk">https://github.com/Shimsuyeon/starwalk</a></p><figure id="36d53af0-890c-4b4c-bf55-72e1f1db5f65"><a href="https://shimsuyeon.github.io/starwalk/" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title"></div></div><div class="bookmark-href"><img src="https://shimsuyeon.github.io/starwalk/staricon.ico" class="icon bookmark-icon"/>https://shimsuyeon.github.io/starwalk/</div></div></a></figure></blockquote><div id="5f7e05c2-f953-41c3-8165-bca4d566469b" class="column-list"><div id="7b61c2f8-cb60-41e8-a5b3-8af025cae649" style="width:50%" class="column"><figure id="df788ba0-d5b3-4f08-88ad-9e2d08256ebf" class="image"><a href="Shim%20Suyeon%20%E1%84%89%E1%85%B5%E1%86%B7%E1%84%89%E1%85%AE%E1%84%8B%E1%85%A7%E1%86%AB%20a8bbb352dba746ff9f619821a58c8a07/Untitled%2015.png"><img style="width:2525px" src="Shim%20Suyeon%20%E1%84%89%E1%85%B5%E1%86%B7%E1%84%89%E1%85%AE%E1%84%8B%E1%85%A7%E1%86%AB%20a8bbb352dba746ff9f619821a58c8a07/Untitled%2015.png"/></a></figure></div><div id="9b1f6eb0-5a8c-4cf3-954d-af01875a6977" style="width:50%" class="column"><figure id="0403ff27-dfaf-4e9e-8f03-5ea512aff5d0"><div class="source"><a href="https://www.youtube.com/watch?v=1t0VOpNtlUs">https://www.youtube.com/watch?v=1t0VOpNtlUs</a></div></figure></div></div><hr id="62be9b81-29e0-4c44-88e3-2d92491d42ab"/><blockquote id="49774b9e-ab05-40cb-80a9-5b689f01f6a7" class="block-color-gray_background"><strong>대한민국 인재상(2022 Talent Medal of Korea)
+</strong>부총리 겸 교육부장관상
+2022.12.29.<figure id="b7306c2f-1b6c-4f50-97a0-a610968cc94c"><a href="https://www.news1.kr/articles/?4909905" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">2022 대한민국 인재상에 광주 청년 2명 선정…김대윤·심수연씨</div><div class="bookmark-description">(광주=뉴스1) 박준배 기자 | 대한민국 대표 인재선발 프로그램인 &#x27;2022 대한민국 인재상&#x27; 100명에 광주 청년 2명이 최종 선정됐다. 29일 광주시에 따르면&amp;nbsp;대학생·청년일반분야에서 김대윤씨&amp;#40;전남대학교 법학전문대학원&amp;#41;와 심수연씨&amp;#40;광주과학기술원&amp;#41;가 대한민국 인재상을 수상했다.&amp;...</div></div><div class="bookmark-href"><img src="https://image.news1.kr/system/resource/news1_www/images/common/favicon.ico" class="icon bookmark-icon"/>https://www.news1.kr/articles/?4909905</div></div><img src="https://image.news1.kr/system/photos/2022/12/29/5763892/article.jpg" class="bookmark-image"/></a></figure></blockquote><h2 id="3d2c5553-7fb8-44fa-855e-d1de1f6e4bea" class="block-color-red_background">Scholarship</h2><blockquote id="105328a9-0827-4473-b9ab-e585cd97a5df" class=""><strong>대통령과학장학생</strong>
+<strong>(National Presidential Science Scholarship)</strong><p id="a6f587d5-023c-427f-b396-443b91de895c" class="">2023 Spring ~ Current</p><figure id="ba42b701-cf2c-4e9d-8b65-386c5ce32c0c"><a href="https://www.yna.co.kr/view/AKR20230705036900054" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">지스트 김정서·양은규·심수연 학생, 대통령과학장학생 선정 | 연합뉴스</div><div class="bookmark-description">(광주=연합뉴스) 형민우 기자 = 지스트(광주과학기술원)는 생명과학부 김정서·기초교육학부 양은규·전기전자컴퓨터공학부 심수연 등 3명의 학생이 2...</div></div><div class="bookmark-href"><img src="https://r.yna.co.kr/www/home_n/v02/img/favicon.ico" class="icon bookmark-icon"/>https://www.yna.co.kr/view/AKR20230705036900054</div></div><img src="https://img7.yna.co.kr/etc/inner/KR/2023/07/05/AKR20230705036900054_01_i_P4.jpg" class="bookmark-image"/></a></figure><figure id="02d58067-47c9-49e6-bb25-d1bdb53b0378"><a href="https://www.instagram.com/p/CvtjP32vtrc/?utm_source=ig_web_copy_link&amp;igshid=MzRlODBiNWFlZA==" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">광주과학기술원 GIST(지스트) on Instagram: &quot;지스타그램 #인터뷰 #지스티안  학업과 교과 외 활동을 병행하는 스타🕺! 꾸준한 교육봉사로 지식을 나누는 스타💃!  지스트에 숨은 스타들을 만나는 특별한 인터뷰 오늘은 2023 대통령과학장학생 심수연 학생을 만나봤습니다. 👋  ▶ 자세한 내용은 인스타그램 스토리를 확인해주세요!&quot;</div><div class="bookmark-description">133 likes, 2 comments - gist.sns on August 8, 2023: &quot;지스타그램 #인터뷰 #지스티안  학업과 교과 외 활동을 병행하는 스타🕺!...&quot;</div></div><div class="bookmark-href"><img src="https://static.cdninstagram.com/rsrc.php/v3/yI/r/VsNE-OHk_8a.png" class="icon bookmark-icon"/>https://www.instagram.com/p/CvtjP32vtrc/?utm_source=ig_web_copy_link&amp;igshid=MzRlODBiNWFlZA==</div></div><img src="https://scontent.cdninstagram.com/v/t39.30808-6/366692812_672583444910307_322820588458206152_n.jpg?stp=dst-jpg_e15_s480x480&amp;_nc_ht=scontent.cdninstagram.com&amp;_nc_cat=103&amp;_nc_ohc=DCiXrSy3cKQAX_T5r15&amp;edm=AMO9-JQAAAAA&amp;ccb=7-5&amp;oh=00_AfBW81CDE45uVY5g7KmAuRqVCMb0ca3q-A7F2ifZAm0hDg&amp;oe=65381CBD&amp;_nc_sid=cc8940" class="bookmark-image"/></a></figure></blockquote><blockquote id="9532a10f-5950-4558-8f23-e00c94cb3c29" class=""><strong>현대자동차 정몽구 온드림 재단 | 미래산업 인재 학부 장학생</strong>
+<strong>(Chung Mong-koo foundation)</strong><p id="9d567f12-274c-45e4-b1ec-2acb19d419cf" class="">2022 Spring, 2022 Fall</p></blockquote><blockquote id="9569ee91-f92b-48f4-8ceb-7138b73620da" class=""><strong>인성 홍복순 장학금
+(Inseong Hong Bok-sun Scholarship)</strong>
+2021.11.16, 2022.11.16</blockquote><p id="d7a7914b-9671-44fe-9f73-f17db4e97a9c" class="">
+</p><h2 id="4d7a7e4a-4810-4518-ae77-a92c79b91fa0" class="block-color-teal_background">Others</h2><blockquote id="0d481833-4d37-4521-ad28-2c37cb7ac94e" class=""><strong>GIST NEWS(지스트 신문사 정기자)</strong>
+2021.03.01.~2022.03.01.<figure id="42394020-124f-4269-ad1a-f59333295808"><a href="https://gistnews.co.kr/?author=124" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title">심 수연</div><div class="bookmark-description">&lt;p&gt;[취재 1팀] 심수연 (21, 기초교육학부)&lt;br /&gt; 경력 :&lt;br /&gt; 2021년 1학기 입사&lt;br /&gt; 2021년 여름학기~ 정기자&lt;/p&gt;</div></div><div class="bookmark-href"><img src="https://gistnews.co.kr/wp-content/uploads/2022/02/그림1-300x300-1.png" class="icon bookmark-icon"/>https://gistnews.co.kr/?author=124</div></div><img src="https://secure.gravatar.com/avatar/727d9b3337d7db3a93bfe55cb6e8cf91?s=200&amp;d=mm&amp;r=g" class="bookmark-image"/></a></figure></blockquote><blockquote id="d79a27db-db39-4a9d-b765-848a38f0663f" class=""><strong>UC Berkeley 2022 Summer</strong>
+CS70, N110</blockquote><blockquote id="04d9e6f7-675a-41bd-babf-58ef65be2e9d" class=""><strong>Gwangju ICT Innovation Square Blockchain track</strong>
+2020.10.19.~2020.12.11 (160hr)
+Educated by <strong>LIKEALION</strong></blockquote><blockquote id="1cb0848e-6a56-4789-9880-1fae86d13ba4" class=""><strong>[이어질 이야기] 출간</strong>
+2021.11.08. 교보문고 퍼플
+isbn: 9788924087390<figure id="67d048d1-d00c-46da-8d5e-6c31efcb9d36"><a href="https://product.kyobobook.co.kr/detail/S000060618536" class="bookmark source"><div class="bookmark-info"><div class="bookmark-text"><div class="bookmark-title"></div></div><div class="bookmark-href">https://product.kyobobook.co.kr/detail/S000060618536</div></div></a></figure></blockquote><blockquote id="73415320-1aac-4616-92c3-f828bc734f6b" class=""><strong>GIST PIUM(Education Service)</strong>
+2021.04.~Current<figure id="5ea210bc-39b0-4c30-b814-aad49b8e6582"><div class="source"><a href="https://youtu.be/fsYcjrPHG5s?feature=shared&amp;t=142">https://youtu.be/fsYcjrPHG5s?feature=shared&amp;t=142</a></div></figure></blockquote><blockquote id="5aebe8e8-c867-4462-9396-a034a7017bc6" class=""><strong>GIST 2021 Buddy program</strong>
+2021 Fall<figure id="0eacf54a-fc11-42b0-9f5c-dab16e226cff"><div class="source"><a href="https://youtu.be/6hQAzzUIoB4?feature=shared&amp;t=92">https://youtu.be/6hQAzzUIoB4?feature=shared&amp;t=92</a></div></figure></blockquote><blockquote id="a6472753-0aa7-4af1-bf56-6a77835811a9" class=""><strong>GIST GDSC 2nd member</strong>
+2022 Fall, 2023 Spring</blockquote><p id="b05c51ca-51f3-4f32-9487-ff932d7aa14d" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
